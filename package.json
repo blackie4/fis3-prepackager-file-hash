@@ -1,6 +1,6 @@
 {
   "name": "fis3-prepackager-file-hash",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "获取当前文件hash值或指定文件hash值",
   "main": "index.js",
   "scripts": {
