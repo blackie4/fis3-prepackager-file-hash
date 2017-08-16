@@ -1,5 +1,5 @@
 
-var reg1 = /('|")__fileHash__\((\/[^\\?\\*\\|<>:"]+)\)__\1/mg;
+var reg1 = /('|")__fileHash__\((\/[^\\?\\*\\|<>:"=;]+)\)__\1/mg;
 var reg2 = /('|")__fileHash__\1/mg;
 
 module.exports = function (ret, pack, settings, opt) {
@@ -8,6 +8,7 @@ module.exports = function (ret, pack, settings, opt) {
     if (content.replace) {
       // 指定文件hash
       content = content.replace(reg1, function (str, quote, filePath) {
+        console.log(filePath)
         var resFile = getMapFile(ret, filePath);
         if (!resFile) return str;
         return quote + resFile.getHash() + quote;
