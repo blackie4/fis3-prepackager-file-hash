@@ -1,7 +1,7 @@
 {
   "name": "fis3-prepackager-file-hash",
-  "version": "0.1.0",
-  "description": "A packager plugin for fis to get file hash value.",
+  "version": "0.1.1",
+  "description": "获取当前文件hash值或指定文件hash值",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

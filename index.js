@@ -8,7 +8,7 @@ module.exports = function (ret, pack, settings, opt) {
     if (content.replace) {
       // 指定文件hash
       content = content.replace(reg1, function (str, quote, filePath) {
-        var resFile = getMapFile(filePath);
+        var resFile = getMapFile(ret, filePath);
         if (!resFile) return str;
         return quote + resFile.getHash() + quote;
       });
@@ -21,19 +21,19 @@ module.exports = function (ret, pack, settings, opt) {
   });
 };
 
-function getMapFile(filePath) {
+function getMapFile(ret, filePath) {
   var file = ret.pkg[filePath] || ret.src[filePath];
-  var v_path = "";
+  var path = "";
   if (!file) {
     for (var k in ret.pkg) {
-      v_path = ret.pkg[k].domain + (ret.pkg[k].url ? ret.pkg[k].url : ret.pkg[k].release);
-      if (v_path === filePath) {
+      path = ret.pkg[k].domain + (ret.pkg[k].url ? ret.pkg[k].url : ret.pkg[k].release);
+      if (path === filePath) {
         return ret.pkg[k];
       }
     }
     for (var k in ret.src) {
-      v_path = ret.src[k].domain + (ret.src[k].url ? ret.src[k].url : ret.src[k].release);
-      if (v_path === filePath) {
+      path = ret.src[k].domain + (ret.src[k].url ? ret.src[k].url : ret.src[k].release);
+      if (path === filePath) {
         return ret.src[k];
       }
     }

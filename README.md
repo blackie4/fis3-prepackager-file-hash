@@ -1,7 +1,7 @@
 fis3-prepackager-file-hash
 =====================
 
-fis3 文件中获取当前文件hash值及指定文件hash值
+fis3 文件中获取当前文件hash值或指定文件hash值
 
 ## 安装
 
