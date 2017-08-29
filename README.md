@@ -1,6 +1,9 @@
 fis3-prepackager-file-hash
 =====================
 
+[![npm](https://img.shields.io/npm/v/fis3-prepackager-file-hash.svg)](https://www.npmjs.com/package/fis3-prepackager-file-hash)
+[![npm](https://img.shields.io/npm/dm/fis3-prepackager-file-hash.svg)](https://www.npmjs.com/package/fis3-prepackager-file-hash)
+
 fis3 文件中获取当前文件hash值或指定文件hash值
 
 ## 安装
